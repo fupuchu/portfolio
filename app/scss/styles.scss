@@ -175,7 +175,7 @@ section {
   height: 100%;
   background-color: $base-blue;
   color: white;
-  border: 1px solid darken($base-blue, 10%);
+  border: 1px solid darken($high-blue, 10%);
   a{
     color : $highlight
   }
@@ -207,9 +207,9 @@ section {
 }
 
 .project {
-  background-color: $low-blue;
+  background-color: $base-blue;
   color: white;
-  border: 1px solid darken($low-blue, 10%);
+  border: 1px solid darken($high-blue, 10%);
 }
 @media screen and (max-width: 600px) {
   .project-grid {
@@ -226,8 +226,8 @@ section {
   }
   div:nth-child(1){
     background: linear-gradient(
-      rgba(51, 51, 51, 0.7),
-      rgba(51, 51, 51, 0.7),
+      rgba(26, 26, 26, 0.89),
+      rgba(26, 26, 26, 0.89),
     ), url("../images/bagabag.png");
     background-size: cover;
     background-position: center;
@@ -235,39 +235,53 @@ section {
   }
   div:nth-child(2){
     background: linear-gradient(
-      rgba(51, 51, 51, 0.7),
-      rgba(51, 51, 51, 0.7),
+      rgba(26, 26, 26, 0.89),
+      rgba(26, 26, 26, 0.89),
     ), url("../images/mastah.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
   div:nth-child(3){
     background: linear-gradient(
-      rgba(51, 51, 51, 0.7),
-      rgba(51, 51, 51, 0.7),
+      rgba(26, 26, 26, 0.89),
+      rgba(26, 26, 26, 0.89),
     ), url("../images/dingkat.jpg");
     background-size: cover;
     background-repeat: no-repeat;
   }
   div:nth-child(4){
     background: linear-gradient(
-      rgba(51, 51, 51, 0.7),
-      rgba(51, 51, 51, 0.7),
+      rgba(26, 26, 26, 0.89),
+      rgba(26, 26, 26, 0.89),
     ), url("../images/whatdis.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
   div:nth-child(5){
     background: linear-gradient(
-      rgba(51, 51, 51, 0.7),
-      rgba(51, 51, 51, 0.7),
+      rgba(26, 26, 26, 0.89),
+      rgba(26, 26, 26, 0.89),
     ), url("../images/edmusic.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 }
+.social {
+  p {
+    margin: 10px;
+  }
+  a {
+    padding: 10px;
+    color:rgb(234, 255, 43);
+    transition: .3s all ease-in-out;
+  }
+  a:hover{
+    color: rgb(255, 138, 43);
+    transition: .3s all ease-in-out;
+  }
+}
 .contact {
-  background-color: $high-blue;
+  background-color: $base-blue;
   color: white;
   border: 1px solid darken($high-blue, 10%);
 }
