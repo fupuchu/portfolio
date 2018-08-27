@@ -5,7 +5,6 @@ html {
 
 body {
   background-color: #1A1A1E;
-  min-height: 100%;
   padding: 0;
   margin: 0;
   position: relative; }
@@ -26,8 +25,7 @@ nav {
   grid-template-columns: 1fr auto 1fr; }
 
 .nav-container {
-  width: 100%;
-  background: #253149; }
+  width: 100%; }
 
 .left-menu {
   grid-column: 1;
@@ -35,8 +33,11 @@ nav {
 
 .logo {
   grid-column: 2;
-  font-size: 40px;
-  padding: 1rem; }
+  font-size: 25px;
+  text-align: center; }
+  .logo img {
+    height: 50%;
+    width: 50%; }
 
 #nav-toggle, .burger-menu {
   display: none; }
@@ -84,7 +85,7 @@ nav a:hover {
 footer {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 50px;
   bottom: 0;
   background-color: #1F2F48; }
 
@@ -105,9 +106,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 50px;
   margin: 0; }
 
+.title {
+  font-weight: 700;
+  color: #fb8c00;
+  text-shadow: #e65100 1px 1px; }
+
 p {
   font-family: "Source Sans Pro", sans-serif;
   margin: 0; }
+
+.sub {
+  color: gray;
+  font-size: 18px;
+  margin: 10px; }
 
 section {
   margin: 10px;
@@ -115,12 +126,37 @@ section {
   border-radius: 5px; }
 
 .about {
+  height: 100%;
   background-color: #1F2F48;
-  color: white; }
+  color: white;
+  border: 1px solid #101824; }
+  .about a {
+    color: #C8D67A; }
+  .about h3 {
+    font-size: 26px;
+    margin: 10px 0 10px 0; }
+  .about .about-text p {
+    margin: 10px;
+    font-size: 20px;
+    line-height: 25px;
+    color: #cccccc; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  grid-gap: 1em;
+  margin: 0 auto;
+  justify-content: center; }
+  .about-grid div {
+    color: #ffe053;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px; }
 
 .project {
   background-color: #253149;
-  color: white; }
+  color: white;
+  border: 1px solid #141a27; }
 
 @media screen and (max-width: 600px) {
   .project-grid {
@@ -130,13 +166,32 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1em; }
-  .project-grid p {
-    background: blue;
+  .project-grid div {
     border-radius: 5px;
     padding: 5px; }
-  .project-grid p:nth-child(odd) {
-    background: gray; }
+  .project-grid div:nth-child(1) {
+    background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../images/bagabag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .project-grid div:nth-child(2) {
+    background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../images/mastah.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .project-grid div:nth-child(3) {
+    background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../images/dingkat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .project-grid div:nth-child(4) {
+    background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../images/whatdis.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .project-grid div:nth-child(5) {
+    background: linear-gradient(rgba(51, 51, 51, 0.7), rgba(51, 51, 51, 0.7)), url("../images/edmusic.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 .contact {
   background-color: #6588AE;
-  color: white; }
+  color: white;
+  border: 1px solid #4d6f93; }

@@ -9,6 +9,9 @@ $base-blue : #1F2F48;
 $low-blue : #253149;
 $high-blue : #6588AE;
 $highlight : #C8D67A;
+$stack-color : rgb(255, 224, 83);
+$title : #fb8c00;
+$title-shadow : #e65100;
 
 $header-font : 'Montserrat', sans-serif;
 $body-font : 'Source Sans Pro', sans-serif;
@@ -20,7 +23,6 @@ html {
 
 body {
   background-color: $base-black;
-  min-height:100%;
   padding: 0;
   margin: 0;
   position: relative;
@@ -45,7 +47,6 @@ nav {
 
 .nav-container {
   width: 100%;
-  background: #253149;
 }
 
 .left-menu {
@@ -55,8 +56,12 @@ nav {
 
 .logo {
   grid-column: 2;
-  font-size: 40px;
-  padding: 1rem;
+  font-size: 25px;
+  text-align: center;
+  img {
+    height: 50%;
+    width: 50%;
+  }
 }
 
 #nav-toggle, .burger-menu {
@@ -118,7 +123,7 @@ nav a:hover {
 footer {
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 50px;
   bottom: 0;
   background-color: $base-blue;
 }
@@ -145,9 +150,19 @@ h1,h2,h3,h4,h5,h6{
   line-height: 50px;
   margin: 0;
 }
+.title {
+  font-weight: 700;
+  color: $title;
+  text-shadow : $title-shadow 1px 1px;
+}
 p {
   font-family: $body-font;
   margin: 0;
+}
+.sub {
+  color : gray;
+  font-size: 18px;
+  margin: 10px;
 }
 
 section {
@@ -157,13 +172,44 @@ section {
 }
 
 .about {
+  height: 100%;
   background-color: $base-blue;
   color: white;
+  border: 1px solid darken($base-blue, 10%);
+  a{
+    color : $highlight
+  }
+  h3 { 
+    font-size: 26px;
+    margin: 10px 0 10px 0; 
+  }
+  .about-text{
+    p {
+      margin: 10px;
+      font-size: 20px;
+      line-height: 25px;
+      color: darken(white, 20%);
+    }
+  }
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px , 1fr));
+  grid-gap: 1em;
+  margin: 0 auto;
+  justify-content: center;
+  div {
+    color: $stack-color;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+  }
 }
 
 .project {
   background-color: $low-blue;
   color: white;
+  border: 1px solid darken($low-blue, 10%);
 }
 @media screen and (max-width: 600px) {
   .project-grid {
@@ -174,17 +220,54 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 1em;
-  p {
-    background: blue;
+  div {
     border-radius: 5px;
     padding: 5px;
   }
-  p:nth-child(odd) {
-    background: gray;
+  div:nth-child(1){
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7),
+    ), url("../images/bagabag.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  div:nth-child(2){
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7),
+    ), url("../images/mastah.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  div:nth-child(3){
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7),
+    ), url("../images/dingkat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  div:nth-child(4){
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7),
+    ), url("../images/whatdis.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  div:nth-child(5){
+    background: linear-gradient(
+      rgba(51, 51, 51, 0.7),
+      rgba(51, 51, 51, 0.7),
+    ), url("../images/edmusic.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
-
 .contact {
   background-color: $high-blue;
-  color: rgb(255, 255, 255);
+  color: white;
+  border: 1px solid darken($high-blue, 10%);
 }
