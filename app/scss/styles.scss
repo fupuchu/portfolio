@@ -210,6 +210,19 @@ section {
   background-color: $base-blue;
   color: white;
   border: 1px solid darken($high-blue, 10%);
+  a {
+    color : rgb(253, 255, 131);
+    text-decoration: none;
+    transition: .3s all ease-in-out;
+  }
+  a:hover {
+    transition: .3s all ease-in-out;
+    color : rgb(255, 159, 80);
+  }
+  .techstack {
+    font-size: 12px;
+    padding : 0 0 10px 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .project-grid {

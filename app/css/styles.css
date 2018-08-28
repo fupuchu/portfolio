@@ -157,6 +157,16 @@ section {
   background-color: #1F2F48;
   color: white;
   border: 1px solid #4d6f93; }
+  .project a {
+    color: #fdff83;
+    text-decoration: none;
+    transition: .3s all ease-in-out; }
+  .project a:hover {
+    transition: .3s all ease-in-out;
+    color: #ff9f50; }
+  .project .techstack {
+    font-size: 12px;
+    padding: 0 0 10px 0; }
 
 @media screen and (max-width: 600px) {
   .project-grid {
